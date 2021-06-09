@@ -2179,7 +2179,7 @@ namespace KapautuChroma
         public Matrix SolveCG(Matrix b)
         {
             throw new NotImplementedException("Still buggy!");
-
+            /*
             if (!this.IsSPD())
                 throw new InvalidOperationException("CG method only works for spd matrices.");
             else if (!this.IsReal())
@@ -2230,6 +2230,7 @@ namespace KapautuChroma
 
                 return x;
             }
+            */
         }
 
         /// <summary>
@@ -2263,7 +2264,7 @@ namespace KapautuChroma
         {
 
             throw new NotImplementedException("Still buggy!");
-
+            /*
             if (!this.IsSquare())
                 throw new InvalidOperationException("Cannot perform QR iteration of non-square matrix.");
 
@@ -2284,6 +2285,7 @@ namespace KapautuChroma
             }
 
             return T;
+            */
         }
 
         /// <summary>
@@ -2295,7 +2297,7 @@ namespace KapautuChroma
         {
 
             throw new NotImplementedException("Still buggy!");
-
+            /*
             Matrix H = this.Clone();
             int m = H.RowCount;
             int n = H.ColumnCount;
@@ -2313,6 +2315,7 @@ namespace KapautuChroma
             }
 
             return new Matrix[] { GivProd(c, s, n), H, c, s };
+            */
         }
 
         /// <summary>
