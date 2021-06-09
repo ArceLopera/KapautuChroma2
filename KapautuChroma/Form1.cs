@@ -282,6 +282,7 @@ namespace KapautuChroma
             XYZ[2] = Yr * (1 - smallxr - smallyr) / smallyr + Yg * (1 - smallxg - smallyg) / smallyg + Yb * (1 - smallxb - smallyb) / smallyb;
 
 
+            //Devolver resultado
             return XYZ;
 
         }       
