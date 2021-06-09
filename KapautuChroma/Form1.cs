@@ -15,7 +15,7 @@ namespace KapautuChroma
     public partial class ChromaMain : Form
     {
 
-        Bitmap InputImage;
+        //Bitmap InputImage;
         
         List<string> CalData1 = new List<string>();
         List<string> CalData2 = new List<string>();
@@ -25,12 +25,12 @@ namespace KapautuChroma
         List<string> zData = new List<string>();
         int numSamples = 0;
         int largo, ancho;
-        int nerrorsMAX, nerrorsMIN = 0;
+        //int nerrorsMAX, nerrorsMIN = 0;
         bool showerror = true;
 
-        double Maxdiff = 0;
+        //double Maxdiff = 0;
 
-        int errorOver = 0;
+        //int errorOver = 0;
         double Yr ;
         double Yg;
         double Yb ;
@@ -46,11 +46,13 @@ namespace KapautuChroma
         double smallyg2;
         double smallxb2;
         double smallyb2;
-        double[, ,] x1,y1,ly1;
-        double[, ,] x2, y2, ly2;
+        //double[, ,] x1,y1,ly1;
+        //double[, ,] x2, y2, ly2;
      
 
-        double[,] numCal1, numCal2,numx,numy,numz,numr,numg,numb,numL,numsx,numsy;
+        double[,] numCal2,numx,numy,numz,numr,numg,numb;
+        //double[,] numCal1, numCal2, numx, numy, numz, numr, numg, numb, numL, numsx, numsy;
+
 
         Matrix Minv;
 
@@ -112,6 +114,8 @@ namespace KapautuChroma
            
             return numC[1, 1];
         }
+
+        
 
         private double searchsmallxb(double[,] numC)
         {
@@ -436,92 +440,7 @@ namespace KapautuChroma
                         RGB[2] = 0;
                     }
                 }
-                //some kind of color difference localization
-                if (false)
-                {
-                    Lab1 = this.XYZtoLab(XYZ);
-                    XYZ1 = this.RGBtoXYZ(RGB, numC);
-                    Lab2 = this.XYZtoLab(XYZ1);
-                    
-                    double differen = Math.Abs(Lab1[0] - Lab2[0]);
-                    //double maxpermi = 1;
-                    /*
-                    if (this.Maxdiff < differen)
-                    {
-                        this.Maxdiff = differen;
-                    }
-                    if (differen > maxpermi)
-                    {
-                        RGB[0] = 255 * 1 / 11;
-                        RGB[1] = 255 * 1 / 11;
-                        RGB[2] = 0;
-                    }
-
-                    if (differen > maxpermi * 2)
-                    {
-                        RGB[0] = 255 * 2 / 11;
-                        RGB[1] = 255 * 2 / 11;
-                        RGB[2] = 0;
-                    }
-
-                    if (differen > maxpermi * 3)
-                    {
-                        RGB[0] = 255 * 3 / 11;
-                        RGB[1] = 255 * 3 / 11;
-                        RGB[2] = 0;
-                    }
-
-                    if (differen > maxpermi * 4)
-                    {
-                        RGB[0] = 255 * 4 / 11;
-                        RGB[1] = 255 * 4 / 11;
-                        RGB[2] = 0;
-                    }
-
-                    if (differen > maxpermi * 5)
-                    {
-                        RGB[0] = 255 * 5 / 11;
-                        RGB[1] = 255 * 5 / 11;
-                        RGB[2] = 0;
-                    }
-                    if (differen > maxpermi * 6)
-                    {
-                        RGB[0] = 255 * 6 / 11;
-                        RGB[1] = 255 * 6 / 11;
-                        RGB[2] = 0;
-                    }
-                    if (differen > maxpermi * 7)
-                    {
-                        RGB[0] = 255 * 7 / 11;
-                        RGB[1] = 255 * 7 / 11;
-                        RGB[2] = 0;
-                    }
-                    if (differen > maxpermi * 8)
-                    {
-                        RGB[0] = 255 * 8 / 11;
-                        RGB[1] = 255 * 8 / 11;
-                        RGB[2] = 0;
-                    }
-                    if (differen > maxpermi * 9)
-                    {
-                        RGB[0] = 255 * 9 / 11;
-                        RGB[1] = 255 * 9 / 11;
-                        RGB[2] = 0;
-                    }
-                    if (differen > maxpermi * 10)
-                    {
-                        RGB[0] = 255 * 10 / 11;
-                        RGB[1] = 255 * 10 / 11;
-                        RGB[2] = 0;
-                    }
-                    if (differen > maxpermi * 20)
-                    {
-                        RGB[0] = 255;
-                        RGB[1] = 255;
-                        RGB[2] = 0;
-                    }*/
-                }
-                
+                              
             }
             catch (Exception me) 
             {
