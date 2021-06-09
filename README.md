@@ -1,6 +1,7 @@
 # XYZ to RGB code
 
-This project shares the code to generate images in RGB from XYZ data using the calibration files from a monitor.
+This project shares the code to generate images in RGB from XYZ data 
+using the calibration files from a monitor.
 
 Input : XYZ data from TOPCON UA-1000
 
