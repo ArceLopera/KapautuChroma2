@@ -443,7 +443,7 @@ namespace KapautuChroma
                     Lab2 = this.XYZtoLab(XYZ1);
                     
                     double differen = Math.Abs(Lab1[0] - Lab2[0]);
-                    double maxpermi = 1;
+                    //double maxpermi = 1;
                     /*
                     if (this.Maxdiff < differen)
                     {
