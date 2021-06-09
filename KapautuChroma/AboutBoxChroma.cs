@@ -105,5 +105,19 @@ namespace KapautuChroma
         {
 
         }
+
+        private void tableLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Specify that the link was visited.
+            this.linkLabel1.LinkVisited = true;
+
+            // Navigate to a URL.
+            System.Diagnostics.Process.Start("https://doi.org/10.1016/j.dib.2019.105079");
+        }
     }
 }

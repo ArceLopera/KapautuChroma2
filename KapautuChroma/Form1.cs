@@ -15,7 +15,6 @@ namespace KapautuChroma
     public partial class ChromaMain : Form
     {
 
-        //Bitmap InputImage;
         
         List<string> CalData1 = new List<string>();
         List<string> CalData2 = new List<string>();
@@ -25,12 +24,9 @@ namespace KapautuChroma
         List<string> zData = new List<string>();
         int numSamples = 0;
         int largo, ancho;
-        //int nerrorsMAX, nerrorsMIN = 0;
         bool showerror = true;
 
-        //double Maxdiff = 0;
-
-        //int errorOver = 0;
+    
         double Yr ;
         double Yg;
         double Yb ;
@@ -46,12 +42,10 @@ namespace KapautuChroma
         double smallyg2;
         double smallxb2;
         double smallyb2;
-        //double[, ,] x1,y1,ly1;
-        //double[, ,] x2, y2, ly2;
      
 
         double[,] numCal2,numx,numy,numz,numr,numg,numb;
-        //double[,] numCal1, numCal2, numx, numy, numz, numr, numg, numb, numL, numsx, numsy;
+    
 
 
         Matrix Minv;
