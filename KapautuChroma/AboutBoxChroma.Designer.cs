@@ -27,7 +27,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBoxChroma));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.labelProductName = new System.Windows.Forms.Label();
@@ -162,13 +161,18 @@
             this.ClientSize = new System.Drawing.Size(652, 435);
             this.Controls.Add(this.tableLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AboutBoxChroma";
-            this.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
-            this.ShowIcon = false;
+            this.Padding = new System.Windows.Forms.Padding(14);
+            // Convert the bitmap resource to an icon and use it.
+            // Get the bitmap.
+            System.Drawing.Bitmap bm = new System.Drawing.Bitmap(Properties.Resources.flock_ico02);
+
+            // Convert to an icon and use for the form's icon.
+            this.Icon = System.Drawing.Icon.FromHandle(bm.GetHicon());
+            this.ShowIcon = true;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";
